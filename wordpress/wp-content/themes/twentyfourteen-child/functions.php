@@ -236,6 +236,8 @@ function twentyfourteen_scripts() {
 	wp_enqueue_style( 'twentyfourteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentyfourteen-style', 'genericons' ), '20131205' );
 	wp_style_add_data( 'twentyfourteen-ie', 'conditional', 'lt IE 9' );
 
+	wp_enqueue_style( 'roboto-slans', 'http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

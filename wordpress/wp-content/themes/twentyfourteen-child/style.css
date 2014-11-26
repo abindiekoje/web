@@ -4313,9 +4313,30 @@ a.post-thumbnail:hover {
 /* General custom styles by ybl */
 body {
 	background: #fff;
+	font-family: 'Roboto Slab', serif !important;
 }
-a, a:hover {
+a, 
+a:active,
+a:hover,
+.widget a:hover {
 	color: #0071cc;
+}
+button, 
+.button, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"],
+button:hover, 
+button:focus, 
+.button:hover, 
+.button:focus, 
+input[type="button"]:hover, 
+input[type="button"]:focus, 
+input[type="reset"]:hover, 
+input[type="reset"]:focus, 
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+	background-color: #0071cc;
 }
 .site {
 	margin: 0 auto;
@@ -4348,6 +4369,7 @@ a, a:hover {
 #primary-navigation li a {
 	color: #000;
 	font-size: 16px;
+	font-family: 'Lato', Arial, sans-serif;
 }
 #primary-navigation li a:hover {
 	background: #0071cc;
@@ -4383,4 +4405,33 @@ a, a:hover {
 }
 #footer-sidebar aside {
 	margin: 0;
+}
+.site-content .entry-content,
+.site-content .entry-header {
+	max-width: 800px;
+}
+
+/* FAQ */
+#qaplus_searchform {
+	margin-bottom: 30px;
+}
+.qa-faq {
+	margin-bottom: 15px;
+}
+
+/* Teasers */
+.teaser {
+	display: block;
+	width: 320px;
+	height: 200px;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.teaser .title {
+	color: #0071cc;
+}
+.teaser .excerpt {
+	color: #2b2b2b;
 }
