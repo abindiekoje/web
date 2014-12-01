@@ -50,8 +50,6 @@ get_header(); ?>
 
 			endif;
 		?>
-		INDEX!!!!!!!!
-		<?php the_excerpt(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

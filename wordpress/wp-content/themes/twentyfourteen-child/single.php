@@ -32,8 +32,6 @@ get_header(); ?>
 				endwhile;
 			?>
 
-			SINGLE!!!!
-			<?php the_excerpt(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

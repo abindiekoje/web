@@ -40,27 +40,30 @@ get_header(); ?>
 
 			<?php 
 				if (is_front_page()) {
-					echo "<div class=\"entry-title\">Aktuelles</div>";
-					query_posts('posts_per_page=-1&post_type=post');
-					while ( have_posts() ) : the_post();
-					echo "<a class=\"teaser\" href=\"";
-					the_permalink();
-					echo "\">";
-						the_post_thumbnail();
-						echo "<span class=\"title\">";
-						the_title();
-						echo "</span>";
-						echo "<span class=\"excerpt\">";
-						the_excerpt();
-						echo "</span>";
-					echo "</a>";
-					//get_template_part( 'content', 'page' );
+					echo "<div class=\"entry-header\"><div class=\"entry-title\">Aktuelles</div></div>";
+					echo "<div class=\"entry-content\">";
+						query_posts('posts_per_page=-1&post_type=post');
+						while ( have_posts() ) : the_post();
+							echo "<a class=\"teaser\" href=\"";
+							the_permalink();
+							echo "\">";
+								the_post_thumbnail();
+								echo "<span class=\"title\">";
+								the_title();
+								echo "</span>";
+								echo "<span class=\"excerpt\">";
+								the_excerpt();
+								echo "</span>";
+							echo "</a>";
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				endwhile;					
+							//get_template_part( 'content', 'page' );
+
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) {
+								comments_template();
+							}
+						endwhile;					
+					echo "</div>";						
 				}
 			?>
 
