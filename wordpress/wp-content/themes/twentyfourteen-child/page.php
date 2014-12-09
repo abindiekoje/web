@@ -47,7 +47,16 @@ get_header(); ?>
 							echo "<a class=\"teaser\" href=\"";
 							the_permalink();
 							echo "\">";
-								the_post_thumbnail();
+								echo "<span class=\"thumbnail\">";
+								if (has_post_thumbnail()) {
+									the_post_thumbnail();	
+								}
+								else {
+									echo "<span class=\"logo\">";
+									the_title();
+									echo "</span>";
+								}
+								echo "</span>";								
 								echo "<span class=\"title\">";
 								the_title();
 								echo "</span>";
